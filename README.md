@@ -2,7 +2,7 @@
 
 [Qi Fan](https://github.com/fanq15), [Wenjie Pei](https://wenjiepei.github.io/), [Yu-Wing Tai](https://scholar.google.com/citations?user=nFhLmFkAAAAJ&hl=zh-CN), [Chi-Keung Tang](https://scholar.google.com/citations?user=EWfpM74AAAAJ&hl=zh-CN)
 
-![](./docs/pipeline.png)
+![](./docs/ssp-model.pdf)
 
 
 
@@ -18,7 +18,7 @@ The codebase contains the official code of our paper [Self-Support Few-Shot Sema
 **Dataset:** [Pascal images and ids](http://host.robots.ox.ac.uk/pascal/VOC/voc2012/VOCtrainval_11-May-2012.tar)
 | [Semantic segmentation annotations](https://drive.google.com/file/d/1ikrDlsai5QSf2GiSUR3f8PZUzyTubcuF/view?usp=sharing)
 
-### File organization
+### File Organization
 
 ```
 ├── ./pretrained
@@ -27,8 +27,16 @@ The codebase contains the official code of our paper [Self-Support Few-Shot Sema
     
 ├── [Your Pascal Path]
     ├── JPEGImages
+    │   ├── 2007_000032.jpg
+    │   └── ...
+    │
     ├── SegmentationClass
+    │   ├── 2007_000032.png
+    │   └── ...
+    │
     └── ImageSets
+        ├── train.txt
+        └── val.txt
 ```
 
 
@@ -41,6 +49,18 @@ CUDA_VISIBLE_DEVICES=0,1 python -W ignore main.py \
 ```
 
 You may change the ``backbone`` from ``resnet50`` to ``resnet101``, change the ``fold`` from ``0`` to ``1/2/3``, or change the ``shot`` from ``1`` to ``5`` for other settings.
+
+## Performance and Trained Models
+
+### Pascal Voc
+
+| Setting |   Backbone  | Refinement | Fold 0 | Fold 1 | Fold 2 | Fold 3 |  Mean  |
+| :-----: | :---------: | :----: | :----: | :----: | :----: | :----: | :----: |
+| 1-shot  |  ResNet-50  | Yes | [61.4]()  |  [67.8]()  |  [66.5]()  |  [50.9]()  |  **61.7**  |
+| 1-shot  |  ResNet-101 | Yes | [63.2]()  |  [70.4]()  |  [68.5]()  |  [56.3]()  |  **64.6**  |
+| 5-shot  |  ResNet-50  | Yes | [67.5]()  |  [72.3]()  |  [75.2]()  |  [62.1]()  |  **69.3**    |
+| 5-shot  |  ResNet-101 | Yes | [70.9]()  |  [77.1]()  |  [78.9]()  |  [66.1]()  |  **73.3**   |
+
 
 ## Acknowledgement
 
