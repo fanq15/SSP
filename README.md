@@ -54,7 +54,7 @@ You may change the ``backbone`` from ``resnet50`` to ``resnet101``, change the `
 
 ### Pascal VOC
 
-| Method | Setting |   Backbone  | Refinement | Fold 0 | Fold 1 | Fold 2 | Fold 3 |  Mean  |
+| Method | Setting |   Backbone  | SSP Refine | Fold 0 | Fold 1 | Fold 2 | Fold 3 |  Mean  |
 | :-----: | :-----: | :---------: | :----: | :----: | :----: | :----: | :----: | :----: |
 | Baseline | 1-shot  |  ResNet-50  | No | [54.9](https://drive.google.com/file/d/1Itnv562-dhfZOV-_upX1BlMFWIGJFFhn/view?usp=sharing)  |  [66.5](https://drive.google.com/file/d/183JO8a3wjIG1ERSie8r0N7QVlV7FgNd_/view?usp=sharing)  |  [61.7](https://drive.google.com/file/d/1X7Z5RfRJNVTndMQgX3nKGbcM-pWIsOPR/view?usp=sharing)  |  [48.3](https://drive.google.com/file/d/1sOj37uXvNQTBeMFC-Dx2A-MaMj7nC-gn/view?usp=sharing)  |  **57.9**  |
 | Baseline | 1-shot  |  ResNet-101 | No | [57.2](https://drive.google.com/file/d/10Nco3CvXZgEE_0wDjbyRKoUK3JpkR79q/view?usp=sharing)  |  [68.5](https://drive.google.com/file/d/137JjNvQAksp4PepT93orcHCFCRd6HkFt/view?usp=sharing)  |  [61.3](https://drive.google.com/file/d/1wTUyjqkh4-AuLSExfXPUXvK59C4NTdif/view?usp=sharing)  |  [53.3](https://drive.google.com/file/d/1lWpLX_Wwwb5dINjjGcg3XkxOdZGR_mhM/view?usp=sharing)  |  **60.1**  |
@@ -67,6 +67,18 @@ You may change the ``backbone`` from ``resnet50`` to ``resnet101``, change the `
 
 
 ### MS COCO
+
+| Method | Setting |   Backbone  | Eval Protocol | Fold 0 | Fold 1 | Fold 2 | Fold 3 |  Mean  |
+| :-----: | :-----: | :---------: | :----: | :----: | :----: | :----: | :----: | :----: |
+| SSP (Ours) | 1-shot  |  ResNet-50  | Ours | [46.4](https://drive.google.com/file/d/17QziEObdCib_2lg7SoEptkt_qoWBpCmy/view?usp=sharing)  |  [35.2](https://drive.google.com/file/d/1HXEvAfpeAc3TJjgy3LRb35EWn2zVgxNT/view?usp=sharing)  |  [27.3](https://drive.google.com/file/d/1qSApqbSyH4ckfFWtg_SAMRXDlsijwkpt/view?usp=sharing)  |  [25.4](https://drive.google.com/file/d/1PjtK1dYFXR5xkyjkmbc2XdobRTJw0cEh/view?usp=sharing)  |  **33.6**  |
+| SSP (Ours) | 1-shot  |  ResNet-101  | Ours | [50.4](https://drive.google.com/file/d/1kHZoe3TMextLJZqvnZdNQjQg-pe7Ag0_/view?usp=sharing)  |  [39.9](https://drive.google.com/file/d/1XapUFZE86J0u-jwricmYsumv2cd7pDO8/view?usp=sharing)  |  [30.6](https://drive.google.com/file/d/1A1-1HbZnnRzQjc50-VDNdsByaZ624_5C/view?usp=sharing)  |  [30.0](https://drive.google.com/file/d/1e5W6xbZTisUp8qWRsokaO5Hp_OVGK3B4/view?usp=sharing)  |  **37.7**    |
+| SSP (Ours) | 5-shot  |  ResNet-50 | Ours | [53.9](https://drive.google.com/file/d/1MyKP8sIrDwbHBQBXhDxWVg4uDzbfcG0o/view?usp=sharing)  |  [42.0](https://drive.google.com/file/d/1rVEwt2gUrE-pezgOtyi65N4o3_Ku1jAB/view?usp=sharing)  |  [36.0](https://drive.google.com/file/d/1tE5JU-Gnx-z9xgU-8jz5yjefQNMEfpzP/view?usp=sharing)  |  [33.7](https://drive.google.com/file/d/1sJn242NPYlnm-ErJX_fQvT1HWJ8a72jN/view?usp=sharing)  |  **41.4**  |
+| SSP (Ours) | 5-shot  |  ResNet-101 | Ours | [57.8](https://drive.google.com/file/d/17_cD0Y4vU3h6OniKGEQr0rbEq1klSqa-/view?usp=sharing)  |  [47.0](https://drive.google.com/file/d/1TMZzGN1flPQqxRc1H62dWpTCjgId2aPb/view?usp=sharing)  |  [40.2](https://drive.google.com/file/d/1B4yagrQ0ugX6EUK2yPoJPRUPl_ENqia_/view?usp=sharing)  |  [39.9](https://drive.google.com/file/d/10eO87EkGVUul9BY5Q2zq4vo_2ZR5SNf5/view?usp=sharing)  |  **46.2**   |
+| SSP (Ours) | 1-shot  |  ResNet-50  | HSNet | [35.5](https://drive.google.com/file/d/17QziEObdCib_2lg7SoEptkt_qoWBpCmy/view?usp=sharing)  |  [39.6](https://drive.google.com/file/d/1HXEvAfpeAc3TJjgy3LRb35EWn2zVgxNT/view?usp=sharing)  |  [37.9](https://drive.google.com/file/d/1qSApqbSyH4ckfFWtg_SAMRXDlsijwkpt/view?usp=sharing)  |  [36.7](https://drive.google.com/file/d/1PjtK1dYFXR5xkyjkmbc2XdobRTJw0cEh/view?usp=sharing)  |  **37.4**  |
+| SSP (Ours) | 1-shot  |  ResNet-101  | HSNet | [39.1](https://drive.google.com/file/d/1kHZoe3TMextLJZqvnZdNQjQg-pe7Ag0_/view?usp=sharing)  |  [45.1](https://drive.google.com/file/d/1XapUFZE86J0u-jwricmYsumv2cd7pDO8/view?usp=sharing)  |  [42.7](https://drive.google.com/file/d/1A1-1HbZnnRzQjc50-VDNdsByaZ624_5C/view?usp=sharing)  |  [41.2](https://drive.google.com/file/d/1e5W6xbZTisUp8qWRsokaO5Hp_OVGK3B4/view?usp=sharing)  |  **42.0**    |
+| SSP (Ours) | 5-shot  |  ResNet-50 | HSNet | [40.6](https://drive.google.com/file/d/1MyKP8sIrDwbHBQBXhDxWVg4uDzbfcG0o/view?usp=sharing)  |  [47.0](https://drive.google.com/file/d/1rVEwt2gUrE-pezgOtyi65N4o3_Ku1jAB/view?usp=sharing)  |  [45.1](https://drive.google.com/file/d/1tE5JU-Gnx-z9xgU-8jz5yjefQNMEfpzP/view?usp=sharing)  |  [43.9](https://drive.google.com/file/d/1sJn242NPYlnm-ErJX_fQvT1HWJ8a72jN/view?usp=sharing)  |  **44.1**  |
+| SSP (Ours) | 5-shot  |  ResNet-101 | HSNet | [47.4](https://drive.google.com/file/d/17_cD0Y4vU3h6OniKGEQr0rbEq1klSqa-/view?usp=sharing)  |  [54.5](https://drive.google.com/file/d/1TMZzGN1flPQqxRc1H62dWpTCjgId2aPb/view?usp=sharing)  |  [50.4](https://drive.google.com/file/d/1B4yagrQ0ugX6EUK2yPoJPRUPl_ENqia_/view?usp=sharing)  |  [49.6](https://drive.google.com/file/d/10eO87EkGVUul9BY5Q2zq4vo_2ZR5SNf5/view?usp=sharing)  |  **50.2**   |
+
 
 ## Acknowledgement
 
