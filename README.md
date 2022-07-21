@@ -2,7 +2,7 @@
 
 [Qi Fan](https://github.com/fanq15), [Wenjie Pei](https://wenjiepei.github.io/), [Yu-Wing Tai](https://scholar.google.com/citations?user=nFhLmFkAAAAJ&hl=zh-CN), [Chi-Keung Tang](https://scholar.google.com/citations?user=EWfpM74AAAAJ&hl=zh-CN)
 
-![](./docs/ssp-model.pdf)
+![](./docs/ssp-model.jpg)
 
 
 
