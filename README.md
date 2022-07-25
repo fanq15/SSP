@@ -8,6 +8,7 @@
 
 The codebase contains the official code of our paper [Self-Support Few-Shot Semantic Segmentation](), ECCV 2022.
 
+中文解读: [自支持匹配的小样本任务新思想: Self-Support Few-Shot Semantic Segmentation (ECCV 2022)](https://zhuanlan.zhihu.com/p/545789592)
 
 ## Data preparation
 
@@ -21,27 +22,37 @@ The codebase contains the official code of our paper [Self-Support Few-Shot Sema
 
 ### File Organization
 
+You can follow [HSNet](https://github.com/juhongm999/hsnet) to prepare the MS COCO and FSS-1000 datasets.
 ```
-├── ./pretrained
-    ├── resnet50.pth
-    └── resnet101.pth
-    
-├── [Your Pascal Path]
-    ├── JPEGImages
-    │   ├── 2007_000032.jpg
-    │   └── ...
-    │
-    ├── SegmentationClass
-    │   ├── 2007_000032.png
-    │   └── ...
-    │
-    └── ImageSets
-        ├── train.txt
-        └── val.txt
+    ../                         # parent directory
+    ├── ./SSP                   # current (project) directory
+    |   ├── codes               # various codes
+    |   └── ./pretrained        # pretrained model directory
+    |            ├── resnet50.pth
+    |            └── resnet101.pth
+    └── Datasets_SSP/
+        ├── VOC2012/            # PASCAL VOC2012 devkit
+        │   ├── Annotations/
+        │   ├── ImageSets/
+        │   ├── ...
+        │   └── SegmentationClassAug/
+        ├── COCO2014/           
+        │   ├── annotations/
+        │   │   ├── train2014/  # (dir.) training masks (from Google Drive) 
+        │   │   ├── val2014/    # (dir.) validation masks (from Google Drive)
+        │   │   └── ..some json files..
+        │   ├── train2014/
+        │   └── val2014/
+        └── FSS-1000/           # (dir.) contains 1000 object classes
+            ├── abacus/   
+            ├── ...
+            └── zucchini/
 ```
 
 
 ## Run the code
+
+You can adapt the scripts of `all.sh`, `test.sh` and `hsnet_test.sh` (for the HSNet evaluation protocol) to train and evaluate your models.
 
 ```
 CUDA_VISIBLE_DEVICES=0,1 python -W ignore main.py \
@@ -50,6 +61,8 @@ CUDA_VISIBLE_DEVICES=0,1 python -W ignore main.py \
 ```
 
 You may change the ``backbone`` from ``resnet50`` to ``resnet101``, change the ``fold`` from ``0`` to ``1/2/3``, or change the ``shot`` from ``1`` to ``5`` for other settings.
+
+You can add/remove `--refine` to enable/disable the self-support refinement.
 
 ## Performance and Trained Models
 
@@ -83,10 +96,34 @@ You may change the ``backbone`` from ``resnet50`` to ``resnet101``, change the `
 
 ## Acknowledgement
 
-This codebase is built based on [MLC's baseline code](https://github.com/LiheYoung/MiningFSS).
+This codebase is built based on [MLC's baseline code](https://github.com/LiheYoung/MiningFSS) and we borrow [HSNet](https://github.com/juhongm999/hsnet)'s evaluation protocol for the MS COCO dataset.
 We thank [MLC](https://arxiv.org/abs/1908.06391) and other FSS works for their great contributions.
 
+## Other related repos
+Few-shot image/video object detection: [FewX](https://github.com/fanq15/FewX)
 
+## Other related papers
+  ```bibtex
+  @inproceedings{fan2021fsvod,
+    title={Few-Shot Video Object Detection},
+    author={Fan, Qi and Tang, Chi-Keung and Tai, Yu-Wing},
+    booktitle={ECCV},
+    year={2022}
+  }
+  @inproceedings{fan2020cpmask,
+    title={Commonality-Parsing Network across Shape and Appearance for Partially Supervised Instance Segmentation},
+    author={Fan, Qi and Ke, Lei and Pei, Wenjie and Tang, Chi-Keung and Tai, Yu-Wing},
+    booktitle={ECCV},
+    year={2020}
+  }
+  @inproceedings{fan2020fsod,
+    title={Few-Shot Object Detection with Attention-RPN and Multi-Relation Detector},
+    author={Fan, Qi and Zhuo, Wei and Tang, Chi-Keung and Tai, Yu-Wing},
+    booktitle={CVPR},
+    year={2020}
+  }
+  ```
+  
 ## Citation
 
 ```bibtex
