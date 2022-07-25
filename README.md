@@ -8,7 +8,7 @@
 
 The codebase contains the official code of our paper [Self-Support Few-Shot Semantic Segmentation](), ECCV 2022.
 
-中文解读: [自支持匹配的小样本任务新思想: Self-Support Few-Shot Semantic Segmentation (ECCV 2022)](https://zhuanlan.zhihu.com/p/545789592)
+中文解读: [ECCV 2022 | SSP: 自支持匹配的小样本任务新思想](https://zhuanlan.zhihu.com/p/545789592)
 
 ## Data preparation
 
