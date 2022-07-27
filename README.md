@@ -2,13 +2,30 @@
 
 [Qi Fan](https://github.com/fanq15), [Wenjie Pei](https://wenjiepei.github.io/), [Yu-Wing Tai](https://scholar.google.com/citations?user=nFhLmFkAAAAJ&hl=zh-CN), [Chi-Keung Tang](https://scholar.google.com/citations?user=EWfpM74AAAAJ&hl=zh-CN)
 
-![](./docs/ssp-model.jpg)
+
+
 
 
 
 The codebase contains the official code of our paper [Self-Support Few-Shot Semantic Segmentation](https://arxiv.org/abs/2207.11549), ECCV 2022.
 
 中文解读: [ECCV 2022 | SSP: 自支持匹配的小样本任务新思想](https://zhuanlan.zhihu.com/p/545789592)
+
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/self-support-few-shot-semantic-segmentation/few-shot-semantic-segmentation-on-pascal-5i-1)](https://paperswithcode.com/sota/few-shot-semantic-segmentation-on-pascal-5i-1?p=self-support-few-shot-semantic-segmentation)
+
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/self-support-few-shot-semantic-segmentation/few-shot-semantic-segmentation-on-pascal-5i-5)](https://paperswithcode.com/sota/few-shot-semantic-segmentation-on-pascal-5i-5?p=self-support-few-shot-semantic-segmentation)
+
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/self-support-few-shot-semantic-segmentation/few-shot-semantic-segmentation-on-fss-1000-1)](https://paperswithcode.com/sota/few-shot-semantic-segmentation-on-fss-1000-1?p=self-support-few-shot-semantic-segmentation)
+
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/self-support-few-shot-semantic-segmentation/few-shot-semantic-segmentation-on-fss-1000-5)](https://paperswithcode.com/sota/few-shot-semantic-segmentation-on-fss-1000-5?p=self-support-few-shot-semantic-segmentation)
+
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/self-support-few-shot-semantic-segmentation/few-shot-semantic-segmentation-on-coco-20i-1)](https://paperswithcode.com/sota/few-shot-semantic-segmentation-on-coco-20i-1?p=self-support-few-shot-semantic-segmentation)
+
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/self-support-few-shot-semantic-segmentation/few-shot-semantic-segmentation-on-coco-20i-5)](https://paperswithcode.com/sota/few-shot-semantic-segmentation-on-coco-20i-5?p=self-support-few-shot-semantic-segmentation)
+
+
+
+![](./docs/ssp-model.jpg)
 
 ## Data preparation
 
